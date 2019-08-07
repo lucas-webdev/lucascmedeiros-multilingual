@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '../assets/font-awesome/css/all.min.css' }
     ]
   },
   /*
@@ -25,11 +26,13 @@ export default {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/fontawesome.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -43,6 +46,9 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    [
+      'nuxt-fontawesome'
+    ]
   ],
   /*
   ** vuetify module configuration

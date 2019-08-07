@@ -12,7 +12,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.20",
+    "@fortawesome/free-brands-svg-icons": "^5.10.0",
+    "@fortawesome/free-solid-svg-icons": "^5.10.0",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
