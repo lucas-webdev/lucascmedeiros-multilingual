@@ -116,64 +116,100 @@
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">Habilidades / Competências</h2>
-				<ul class="skills-tab-list">
-					<li>Frontend</li>
-					<li>Backend</li>
-					<li>Diversos</li>
-				</ul>
-				<section class="frontend-skills">
+				<nav class="tabs">
+					<div class="selector"></div>
+					<a href="#" data-tab="frontend-skills" class="skills-tab active"><i
+							class="fab fa-superpowers"></i>Frontend</a>
+					<a href="#" data-tab="backend-skills" class="skills-tab"><i class="fas fa-hand-rock"></i>Backend</a>
+					<a href="#" data-tab="general-skills" class="skills-tab"><i class="fas fa-bolt"></i>Diversos</a>
+				</nav>
+				<section class="skills-list frontend-skills">
 					<label>HTML5</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--html">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--html"></div>
 					</div>
 					<label>JavaScript (ES2015+)</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--js">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--js"></div>
 					</div>
 					<label>Vue.js</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--vue">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--vue"></div>
 					</div>
 					<label>React</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--react">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--react"></div>
 					</div>
 					<label>AngularJS</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--angular">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--angular"></div>
 					</div>
 					<label>CSS (Sass/Less)</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--css">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--css"></div>
 					</div>
 					<label>Responsive Design</label>
 					<div class="progress2 progress-moved">
-						<div class="progress-bar2 progress-front--responsive">
-						</div>
+						<div class="progress-bar2 progress-front progress-front--responsive"></div>
 					</div>
 				</section>
-				<section class="backend-skills">
-					PHP (Laravel framework), Node.js, Ruby on Rails, Express.js, C#, Java, MySQL, WebAPI, AJAX/JSON,
-					SOAP
+				<section class="skills-list backend-skills">
+					<label>PHP (Laravel)</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--php"></div>
+					</div>
+					<label>Ruby on Rails</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--ruby"></div>
+					</div>
+					<label>Node.js / Express</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--node"></div>
+					</div>
+					<label>C# / Java</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--java"></div>
+					</div>
+					<label>Ajax / JSON </label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--json"></div>
+					</div>
+					<label>WebAPI</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--webapi"></div>
+					</div>
+					<label>MySQL / SQL Server</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-back progress-back--mysql"></div>
+					</div>
 				</section>
-				<section class="general-skills">
-					SCRUM, Kanban, Git, Gulp, NPM, Webpack, SOLID Principles, Design Patterns
+				<section class="skills-list general-skills">
+					<label>Agile (SCRUM / Kanban)</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-general progress-general--agile"></div>
+					</div>
+					<label>Versionamento (Git / BitBucket)</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-general progress-general--git"></div>
+					</div>
+					<label>Webpack</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-general progress-general--webpack"></div>
+					</div>
+					<label>Design Patterns / SOLID Principles</label>
+					<div class="progress2 progress-moved">
+						<div class="progress-bar2 progress-general progress-general--solid"></div>
+					</div>
 				</section>
 			</article>
 
 			<!-- Contact -->
 			<article id="contact">
-				<h2 class="major">Contact</h2>
-				<form method="post" action="#">
+				<h2 class="major">Contato</h2>
+				<form class="sendContactForm" method="post" action="#">
 					<div class="fields">
 						<div class="field half">
-							<label for="name">Name</label>
+							<label for="name">Nome</label>
 							<input type="text" name="name" id="name" />
 						</div>
 						<div class="field half">
@@ -181,13 +217,13 @@
 							<input type="text" name="email" id="email" />
 						</div>
 						<div class="field">
-							<label for="message">Message</label>
+							<label for="message">Mensagem</label>
 							<textarea name="message" id="message" rows="4"></textarea>
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
-						<li><input type="reset" value="Reset" /></li>
+						<li><input id="sendContactBtn" type="button" value="Enviar" class="primary" /></li>
+						<li><input type="reset" value="Limpar" /></li>
 					</ul>
 				</form>
 				<ul class="icons">
@@ -464,6 +500,7 @@
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="assets/js/main.js"></script>
 
 </body>

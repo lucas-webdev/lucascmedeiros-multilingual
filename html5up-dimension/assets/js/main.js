@@ -330,5 +330,18 @@
   if (location.hash != "" && location.hash != "#")
     $window.on("load", function() {
       $main._show(location.hash.substr(1), true);
-    });
+  });
+
+  // Send email
+  $('#sendContactBtn').click(e => {
+    e.preventDefault()
+    const msg = $("#message").val()
+    Email.send({
+      SecureToken: 'c13e01f9-1b67-4d39-8a11-c2834ebe77c2',
+      To : 'contato@lucascmedeiros.com.br',
+      From : "contato@lucascmedeiros.com.br",
+      Subject : "Mensagem do site",
+      Body : msg
+    }).then(message => alert(message));
+  });
 })(jQuery);

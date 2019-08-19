@@ -808,96 +808,171 @@ input[type="button"],
 button {
   line-height: calc(2.75rem - 2px); }
 
-.frontend-skills label {
+@keyframes progressBarAnimation100 {
+  0% {
+    width: 5%; }
+  100% {
+    width: 100%; } }
+
+@keyframes progressBarAnimation95 {
+  0% {
+    width: 5%; }
+  100% {
+    width: 95%; } }
+
+@keyframes progressBarAnimation90 {
+  0% {
+    width: 5%; }
+  100% {
+    width: 90%; } }
+
+@keyframes progressBarAnimation85 {
+  0% {
+    width: 5%; }
+  100% {
+    width: 85%; } }
+
+@keyframes progressBarAnimation80 {
+  0% {
+    width: 5%; }
+  100% {
+    width: 80%; } }
+
+@keyframes progressBarColorAnimationTurq {
+  0% {
+    background-color: #5856d6; }
+  100% {
+    background-color: #5ac8fa; } }
+
+@keyframes progressBarColorAnimationGreen {
+  0% {
+    background-color: #4cd964; }
+  100% {
+    background-color: #37d552; } }
+
+@keyframes progressBarColorAnimationRed {
+  0% {
+    background-color: #ff2d55; }
+  100% {
+    background-color: #ff476a; } }
+
+.tabs {
+  font-size: 1rem;
+  padding: 0px;
+  list-style: none;
+  background: transparent;
+  display: flex;
+  border-radius: 50px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; }
+
+.tabs a {
+  text-decoration: none;
+  color: #d6d6d6;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition-duration: 0.4s;
+  transition-property: background-color;
+  width: calc(100% / 3);
+  text-align: center;
+  border: none; }
+
+.tabs a.active {
+  color: white;
+  background-color: rgba(90, 200, 250, 0.2); }
+
+.tabs a i {
+  margin-right: 5px; }
+
+.skills-list {
+  display: none; }
+  .skills-list.frontend-skills {
+    display: block; }
+
+.skills-list label {
   margin-bottom: 5px; }
 
-.frontend-skills .progress2 {
+.skills-list .progress2 {
   padding: 5px;
   border-radius: 0;
   background: rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
   margin-bottom: 15px; }
 
-.frontend-skills .progress-bar2 {
+.skills-list .progress-bar2 {
   height: 3px;
   border-radius: 15px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
   transition: 0.4s linear;
   transition-property: width, background-color; }
 
-.frontend-skills .progress-moved .progress-bar2 {
-  background-color: #5ac8fa;
-  animation: progressBarAnimation 2s; }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--html {
-    width: 100%; }
-
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
+.skills-list.frontend-skills .progress-front {
+  background-color: #5ac8fa; }
+  .skills-list.frontend-skills .progress-front--html {
     width: 100%;
-    background-color: #5ac8fa; } }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--css {
-    width: 100%; }
-
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
+    animation: progressBarAnimation100 2s, progressBarColorAnimationTurq 2s; }
+  .skills-list.frontend-skills .progress-front--css {
     width: 100%;
-    background-color: #5ac8fa; } }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--js {
-    width: 90%; }
-
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
+    animation: progressBarAnimation100 2s, progressBarColorAnimationTurq 2s; }
+  .skills-list.frontend-skills .progress-front--js {
+    width: 95%;
+    animation: progressBarAnimation95 2s, progressBarColorAnimationTurq 2s; }
+  .skills-list.frontend-skills .progress-front--vue {
     width: 90%;
-    background-color: #5ac8fa; } }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--vue {
-    width: 85%; }
+    animation: progressBarAnimation90 2s, progressBarColorAnimationTurq 2s; }
+  .skills-list.frontend-skills .progress-front--react {
+    width: 85%;
+    animation: progressBarAnimation85 2s, progressBarColorAnimationTurq 2s; }
+  .skills-list.frontend-skills .progress-front--angular {
+    width: 80%;
+    animation: progressBarAnimation80 2s, progressBarColorAnimationTurq 2s; }
+  .skills-list.frontend-skills .progress-front--responsive {
+    width: 100%;
+    animation: progressBarAnimation100 2s, progressBarColorAnimationTurq 2s; }
 
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
+.skills-list.backend-skills .progress-back {
+  background-color: #4cd964; }
+  .skills-list.backend-skills .progress-back--php {
+    width: 100%;
+    animation: progressBarAnimation100 2s, progressBarColorAnimationGreen 2s; }
+  .skills-list.backend-skills .progress-back--ruby {
+    width: 85%;
+    animation: progressBarAnimation85 2s, progressBarColorAnimationGreen 2s; }
+  .skills-list.backend-skills .progress-back--node {
     width: 90%;
-    background-color: #5ac8fa; } }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--react {
-    width: 80%; }
+    animation: progressBarAnimation90 2s, progressBarColorAnimationGreen 2s; }
+  .skills-list.backend-skills .progress-back--java {
+    width: 80%;
+    animation: progressBarAnimation80 2s, progressBarColorAnimationGreen 2s; }
+  .skills-list.backend-skills .progress-back--json {
+    width: 95%;
+    animation: progressBarAnimation95 2s, progressBarColorAnimationGreen 2s; }
+  .skills-list.backend-skills .progress-back--webapi {
+    width: 90%;
+    animation: progressBarAnimation90 2s, progressBarColorAnimationGreen 2s; }
+  .skills-list.backend-skills .progress-back--mysql {
+    width: 95%;
+    animation: progressBarAnimation95 2s, progressBarColorAnimationGreen 2s; }
 
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
+.skills-list.general-skills .progress-general {
+  background-color: #ff476a; }
+  .skills-list.general-skills .progress-general--agile {
+    width: 95%;
+    animation: progressBarAnimation95 2s, progressBarColorAnimationRed 2s; }
+  .skills-list.general-skills .progress-general--git {
+    width: 95%;
+    animation: progressBarAnimation95 2s, progressBarColorAnimationRed 2s; }
+  .skills-list.general-skills .progress-general--webpack {
+    width: 80%;
+    animation: progressBarAnimation80 2s, progressBarColorAnimationRed 2s; }
+  .skills-list.general-skills .progress-general--solid {
     width: 90%;
-    background-color: #5ac8fa; } }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--angular {
-    width: 75%; }
-
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
-    width: 90%;
-    background-color: #5ac8fa; } }
-  .frontend-skills .progress-moved .progress-bar2.progress-front--responsive {
-    width: 100%; }
-
-@keyframes progressBarAnimation {
-  0% {
-    width: 5%;
-    background-color: #5856d6; }
-  100% {
-    width: 90%;
-    background-color: #5ac8fa; } }
+    animation: progressBarAnimation90 2s, progressBarColorAnimationRed 2s; }
 
 /* BG */
 #bg {
