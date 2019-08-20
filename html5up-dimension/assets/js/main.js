@@ -11,7 +11,8 @@
     $header = $("#header"),
     $footer = $("#footer"),
     $main = $("#main"),
-    $main_articles = $main.children("article");
+    $main_articles = $main.children("article"),
+    $skills_tab = $("#about .skills-tab");
 
   // Breakpoints.
   breakpoints({
@@ -300,6 +301,18 @@
       // Show article.
       $main._show(location.hash.substr(1));
     }
+  });
+
+  $skills_tab.click((e) => {
+    e.preventDefault()
+    const tab = $(e.target)
+    const type = tab.data('tab')
+    var $skillsList = $('.skills-list')
+    
+    $skills_tab.removeClass('active')
+    tab.addClass('active')
+    $skillsList.hide()
+    $(`.${type}`).show()
   });
 
   // Scroll restoration.
