@@ -1,7 +1,7 @@
 {
   "name": "lucascmedeiros-multilingual",
   "version": "0.1.0",
-  "homepage": "https://lucascmedeiros.github.io/lucascmedeiros-multilingual",
+  "homepage": "https://lucas-webdev.github.io/lucascmedeiros-multilingual",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
